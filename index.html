@@ -14,94 +14,100 @@
         <li><a href="index.html">Sangeet</a></li>
         <li><a href="login.html">Account</a></li>
       </ul>
-    </nav>
+    </nav>  
+    <!-- Music Upload Section -->
+    <div class="upload-section">
+      <h2>🎵 Add Your Music</h2>
+      <p>Upload your favorite songs to create personalized playlists</p>
+      <input type="file" id="music-upload" accept="audio/*" multiple style="display: none;">
+      <button class="upload-btn" onclick="document.getElementById('music-upload').click()">
+        📁 Choose Music Files
+      </button>
+      <button class="upload-btn" id="create-playlist-btn">
+        ➕ Create New Playlist
+      </button>
+    </div>
+
+    <!-- Uploaded Music Files Display -->
+    <div class="music-files-list" id="music-files-list">
+      <!-- Uploaded music files will appear here -->
+    </div>
+
     <div class="super-container">
       <!--This is the upper side scroll bar-->
       <div class="upper">
         <div class="container">
-          <div class="card" id="card1">Local Songs</div>
-          <div class="card" id="card2">Best of Arijit Singh</div>
-          <div class="card" id="card3">Darshan Raval Mashups 2025</div>
-          <div class="card" id="card4">Todays Most Watched</div>
-          <div class="card" id="card5">Best of the Year</div>
-          <div class="card" id="card6">Old is Gold</div>
-          <div class="card" id="card6">New Songs</div>
-          <div class="card" id="card6">Podcasts</div>
-          <div class="card" id="card6">Create Your Own Playlist</div>
+          <div class="card" id="card1" data-playlist="local">Local Songs</div>
+          <div class="card" id="card2" data-playlist="arijit">Best of Arijit Singh</div>
+          <div class="card" id="card3" data-playlist="darshan">Darshan Raval Mashups 2025</div>
+          <div class="card" id="card4" data-playlist="trending">Todays Most Watched</div>
+          <div class="card" id="card5" data-playlist="yearly">Best of the Year</div>
+          <div class="card" id="card6" data-playlist="oldies">Old is Gold</div>
+          <div class="card" id="card7" data-playlist="new">New Songs</div>
+          <div class="card" id="card8" data-playlist="podcasts">Podcasts</div>
+          <div class="card" id="card9" data-playlist="custom">Create Your Own Playlist</div>
         </div>
       </div>
 
       <!-- this the lower-left side last song played section -->
-
       <div class="lower">
         <div class="lower-left">
-          <h1 id="lower-left-heading">Last Played Songs</h1>
+          <div class="history-header">
+            <h1 id="lower-left-heading">Last Played Songs</h1>
+            <button class="clear-history-btn" id="clear-history">🗑️ Clear History</button>
+          </div>
           <div class="played-songs" id="played-songs">
             <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
-            </div>
-            <div class="played-song" id="played-song">
-              <span>You have played it recently</span>
+              <span>No songs played yet</span>
             </div>
           </div>
         </div>
 
         <div class="lower-right">
           <div class="lower-right-header">
-            <h1 id="lower-right-heading">This song is playing...</h1>
+            <h1 id="lower-right-heading">Select a song to play</h1>
           </div>
-          <!-- <img id="song-img" src="song.jpg" alt=""> -->
+          
+          <!-- Audio Visualizer -->
+          <div class="audio-visualizer" id="audio-visualizer" style="display: none;">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          
+          <!-- Progress Bar -->
+          <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          
+          <!-- Time Display -->
+          <div class="time-display">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+          </div>
+
+          <!-- Volume Control -->
+          <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50">
+          </div>
+
           <div class="player">
-            <button id="prev">Prev</button>
-            <button id="play">Play</button>
-            <button id="next">Next</button>
+            <button id="shuffle">🔀</button>
+            <button id="prev">⏮️ Prev</button>
+            <button id="play">▶️ Play</button>
+            <button id="next">Next ⏭️</button>
+            <button id="repeat">🔁</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer">
-      <span>@copyright 2025</span><br>
-      <span>maintained by Saikat Tunga</span>
-    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audio-player" preload="metadata"></audio>
+
 
     <!--The last lower start here or the player basically-->
 
