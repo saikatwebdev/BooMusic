@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BooM|BooM</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li class="brand"><img src="logo.png" alt="Logo"></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+      <ul>
+        <li class="brand"><img src="logo.png" alt="Logo" /></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
+
+    <!--This is the upper side scroll bar-->
     <div class="upper">
-        <div class="container">
-            <div class="card" id="card1">Local Songs</div>
-            <div class="card" id="card2">Best of Arijit Singh</div>
-            <div class="card" id="card3">Darshan Raval Mashups 2025</div>
-            <div class="card" id="card4">Todays Most Watched</div>
-            <div class="card" id="card5">Best of the Year</div>
-            <div class="card" id="card6">Old is Gold</div>
-            <div class="card" id="card6">New Songs</div>
-            <div class="card" id="card6">Podcasts</div>
-            <div class="card" id="card6">Create Your Own Playlist</div>
-        </div>
+      <div class="container">
+        <div class="card" id="card1">Local Songs</div>
+        <div class="card" id="card2">Best of Arijit Singh</div>
+        <div class="card" id="card3">Darshan Raval Mashups 2025</div>
+        <div class="card" id="card4">Todays Most Watched</div>
+        <div class="card" id="card5">Best of the Year</div>
+        <div class="card" id="card6">Old is Gold</div>
+        <div class="card" id="card6">New Songs</div>
+        <div class="card" id="card6">Podcasts</div>
+        <div class="card" id="card6">Create Your Own Playlist</div>
+      </div>
     </div>
 
+    <!-- this the lower-left side last song played section -->
 
+    <div class="lower">
+      <div class="lower-left">
+        <h1 id="lower-left-heading">Last Played Songs</h1>
+        <div class="played-songs" id="played-songs">
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+            <div class="played-song" id="played-song"><div class="scroll-songName">You have played it recently</div></div>
+        </div>
+        
+      </div>
 
-
-
+      <div class="lower-right">
+        <h1 id="lower-right-heading">This song is playing...</h1>
+        <img  src="song.jpg" alt="playing song">
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

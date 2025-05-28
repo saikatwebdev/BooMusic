@@ -1,12 +1,12 @@
 body{
-    background-color: rgb(232, 175, 175);
+    background-color: rgb(105, 101, 101);
 }
 
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
@@ -48,7 +48,8 @@ nav ul li a{
     height: 7px;
 }
 .container::-webkit-scrollbar-thumb{
-    background-color: rgb(255, 253, 253);
+    /* background-color: rgb(3, 152, 132); */
+    background: linear-gradient(45deg, #a06c13, #17cad7, #1338db);
     border-radius: 10px;
 }
 .card{
@@ -70,4 +71,101 @@ nav ul li a{
 
 .card:hover{
     transform: scale(1.1);
+}
+
+.lower{
+    display: flex;
+    flex-direction: row;
+    height: calc(95vh - 350px);
+}
+
+
+
+.lower-left{
+    background-color: black;
+    height: 100%;
+    width: 50vw;
+    border: 2px solid;
+}
+#lower-left-heading {
+    background-color: black;
+    color: rgb(48, 226, 176);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 4px yellowgreen solid;
+    border-radius: 20px;
+}
+
+.played-songs{
+    overflow-y: scroll;
+    height: calc(100% - 48px);
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+
+}
+
+.played-song{
+    color: rgb(48, 226, 176);
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    border-bottom: 1px solid  rgb(23, 114, 88) ;
+    border-radius: 20px;
+}
+
+
+/* here i will add auto scroll if the song name is too large */
+
+.scroll-songName {
+  display: inline-block;
+  padding-left: relative;     /* Start off-screen */
+  animation: none;
+}
+/* end of the song scroll */
+
+.played-songs::-webkit-scrollbar{
+    width: 7px;
+}
+.played-songs::-webkit-scrollbar-thumb{
+    /* background-color: rgb(3, 152, 132); */
+    background: linear-gradient(45deg, #a06c13, #17cad7, #1338db);
+    border-radius: 10px;
+}
+
+.lower-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+    background:linear-gradient( rgb(3, 152, 132), #000000);
+    border: solid;
+    padding: 10px;
+}
+
+#lower-right-heading{
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 20px;
+}
+.lower-right img{
+    border-radius: 20px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+}
+
+@media (max-width: 768px) {
+    .lower {
+        flex-direction: column;
+    }
+    .lower-left{
+        width: 100vw;
+    }
+    .lower-right {
+        width: 100vw;
+    }
 }
