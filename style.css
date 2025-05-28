@@ -55,6 +55,11 @@ nav ul li a {
   background: linear-gradient(45deg, #a06c13, #17cad7, #1338db);
   border-radius: 10px;
 }
+
+#playlist-header{
+  margin-left: 20px;
+  color: #1dcd9f;
+}
 .card {
   display: flex;
   justify-content: center;

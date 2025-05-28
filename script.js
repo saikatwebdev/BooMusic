@@ -47,7 +47,6 @@
             { name: "Mann Bharryaa 2.0", artist: "B Praak", duration: "4:15" }
           ];
         }
-
         setupFileUpload() {
           const uploadInput = document.getElementById('music-upload');
           const createPlaylistBtn = document.getElementById('create-playlist-btn');
