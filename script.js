@@ -101,7 +101,7 @@
               </div>
               <button class="play-file-btn" onclick="musicPlayer.playUploadedFile(${index})">
                 ▶️
-              </button>
+              </button>  
             `;
             container.appendChild(fileItem);
           });

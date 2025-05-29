@@ -260,6 +260,7 @@ nav ul li a {
   margin-left: 10px;
 }
 
+
 .history-header {
   display: flex;
   justify-content: space-between;
@@ -389,5 +390,9 @@ nav ul li a {
   .lower-right img {
     height: auto;
     width: 100%;
+  }
+
+  #shuffle, #repeat{
+    display: none;
   }
 }
